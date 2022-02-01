@@ -1,8 +1,11 @@
 -- Load all config files
 
 require('options')
--- require('keymaps')
+require('keymaps')
 -- require('commands')
 require('plugins')
 require('themes')
+require'nvim-tree'.setup {
+  open_on_setup = true,
+}
 require('lualine').setup()
