@@ -26,7 +26,27 @@ return require('packer').startup(function(use)
   -- Themes
   use 'folke/tokyonight.nvim'
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+  -- Status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Neo vim tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {
+      open_on_setup       = true,
+    } end
+  }
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  
 end)

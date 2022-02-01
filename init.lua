@@ -5,4 +5,4 @@ require('options')
 -- require('commands')
 require('plugins')
 require('themes')
-
+require('lualine').setup()
