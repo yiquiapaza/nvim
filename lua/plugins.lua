@@ -29,11 +29,29 @@ return require('packer').startup(function(use)
   -- Icons
   use "kyazdani42/nvim-web-devicons"
 
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
   -- Status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  
+
+  -- LSP 
+    -- LSP server
+  use({
+    'neovim/nvim-lspconfig',
+    config = function() require('plugins.lspconfig') end
+  })
+  use 'williamboman/nvim-lsp-installer'  -- Helper for installing most language servers
+  
+  -- BlankLine
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Neo vim tree
   use {
