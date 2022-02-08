@@ -41,17 +41,25 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   
-
   -- LSP 
-    -- LSP server
-  use({
+  use {
     'neovim/nvim-lspconfig',
-    config = function() require('plugins.lspconfig') end
-  })
-  use 'williamboman/nvim-lsp-installer'  -- Helper for installing most language servers
-  
+    'williamboman/nvim-lsp-installer',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+  }
+
+  -- Luasnip users
+  use {
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+  }
+
   -- BlankLine
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- Neo vim tree
   use {
