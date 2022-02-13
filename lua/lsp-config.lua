@@ -9,7 +9,27 @@ lsp_installer.on_server_ready(function(server)
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
+    if server.name == "gopls" then
+      opts.cmd =  { "gopls" }
+      opts.filetypes = { "go", "gomod", "gotmpl" }
+      opts.root_dir = require"lspconfig".util.root_pattern("go", ".git")
+      
 
+      -- lspconfig = require "lspconfig"
+      -- lspconfig.gopls.setup {
+      --  cmd = {"gopls", "serve"},
+      --  filetypes = { "go", "gomod", "gotmpl" },
+      --  root_dir = require"lspconfig".util.root_pattern("go.mod", ".git"),
+      --  settings = {
+      --    gopls = {
+      --     analyses = {
+      --        unusedparams = true,
+      --      },
+      --      staticcheck = true,
+      --    },
+      --  },
+      -- }
+    end
     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
     -- before passing it onwards to lspconfig.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
@@ -43,7 +63,7 @@ end)
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
+      { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
@@ -66,3 +86,4 @@ end)
       { name = 'cmdline' }
     })
   })
+
