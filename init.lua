@@ -16,3 +16,5 @@ require('indent_blankline').setup{
 }
 require('nvim-treesitter-config')
 require('lsp-config')
+
+require('nvim-cmp')
