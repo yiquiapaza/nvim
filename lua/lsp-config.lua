@@ -9,10 +9,10 @@ lsp_installer.on_server_ready(function(server)
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
-    if server.name == "gopls" then
-      opts.cmd =  { "gopls" }
-      opts.filetypes = { "go", "gomod", "gotmpl" }
-      opts.root_dir = require"lspconfig".util.root_pattern("go", ".git")
+    --if server.name == "gopls" then
+    --  opts.cmd =  { "gopls" }
+    --  opts.filetypes = { "go", "gomod", "gotmpl" }
+    --  opts.root_dir = require"lspconfig".util.root_pattern("go,mod", ".git")
       
 
       -- lspconfig = require "lspconfig"
@@ -29,7 +29,7 @@ lsp_installer.on_server_ready(function(server)
       --    },
       --  },
       -- }
-    end
+    --end
 
     -- if server.name == "eslint" then
     --  opts.on_attach = function (client, bufnr)

@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   
-  -- LSP 
+  -- LSP and CMP 
   use {
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     'hrsh7th/nvim-cmp',
   }
 
-  -- Luasnip users
+  -- CMP Luasnip users
   use {
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
@@ -82,4 +82,12 @@ return require('packer').startup(function(use)
 
   use 'easymotion/vim-easymotion'
 
+  
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    -- tag = 'release' -- To use the latest release
+  }
 end)
