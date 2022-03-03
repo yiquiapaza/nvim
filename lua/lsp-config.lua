@@ -30,6 +30,15 @@ lsp_installer.on_server_ready(function(server)
       --  },
       -- }
     end
+
+    -- if server.name == "eslint" then
+    --  opts.on_attach = function (client, bufnr)
+    --    client.resolved_capabilities.document_formatting = true
+    --  end 
+    --  opts.settings = {
+    --    format = { enable = true }
+    --  }
+    -- end
     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
     -- before passing it onwards to lspconfig.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
