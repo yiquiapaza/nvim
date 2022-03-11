@@ -15,4 +15,4 @@ require('lsp-config')
 
 require('nvim-cmp')
 require('gitsigns').setup()
-require('indent_blankline')
+require('indent-blackline')
