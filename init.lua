@@ -10,14 +10,9 @@ require'nvim-tree'.setup {
 }
 require('lualine').setup()
 
-require('indent_blankline').setup{
-  show_current_context = true,
-  show_end_of_line = true,
-  space_char_blackline = " ",
-}
 require('nvim-treesitter-config')
 require('lsp-config')
 
 require('nvim-cmp')
 require('gitsigns').setup()
-
+require('indent_blankline')

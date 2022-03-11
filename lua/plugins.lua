@@ -24,8 +24,9 @@ return require('packer').startup(function(use)
   use({'wbthomason/packer.nvim', opt = true})
 
   -- Themes
-  use 'folke/tokyonight.nvim'
-  
+  -- use 'folke/tokyonight.nvim'
+  use 'shaunsingh/moonlight.nvim'
+
   -- Icons
   use "kyazdani42/nvim-web-devicons"
 
@@ -58,9 +59,6 @@ return require('packer').startup(function(use)
     'saadparwaiz1/cmp_luasnip',
   }
 
-  -- BlankLine
-  use 'lukas-reineke/indent-blankline.nvim'
-
   -- Neo vim tree
   use {
     'kyazdani42/nvim-tree.lua',
@@ -90,4 +88,8 @@ return require('packer').startup(function(use)
     },
     -- tag = 'release' -- To use the latest release
   }
+
+  -- Ident Blackline
+  use "lukas-reineke/indent-blankline.nvim"
+
 end)
