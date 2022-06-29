@@ -8,6 +8,12 @@ lsp_installer.on_server_ready(function(server)
     -- (optional) Customize the options passed to the server
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
+    --  if server.name == "gopls" then
+    --    opts.cmd = { "gopls" }
+    --    opts.filetypes = { "go", "gomod", "gotmpl"}
+    --    opts.root_dir = {"go.mod", ".git"}  
+    --    opts.single_file_support = true
+    --  end
     -- end
     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
     -- before passing it onwards to lspconfig.
