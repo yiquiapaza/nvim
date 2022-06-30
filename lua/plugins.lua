@@ -25,7 +25,8 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- use 'folke/tokyonight.nvim'
-  use 'shaunsingh/moonlight.nvim'
+  -- use 'shaunsingh/moonlight.nvim'
+  use 'ellisonleao/gruvbox.nvim'
 
   -- Icons
   use "kyazdani42/nvim-web-devicons"

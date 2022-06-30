@@ -5,4 +5,7 @@
 
 -- Moonlight
 
-require('moonlight').set()
+--require('moonlight').set()
+require('gruvbox').setup({})
+vim.cmd('colorscheme gruvbox')
+
