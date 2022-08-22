@@ -1,20 +1,22 @@
 local lsp_installer = require("nvim-lsp-installer")
-
+local utill = require("lspconfig.util")
 -- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
 -- or if the server is already installed).
 lsp_installer.on_server_ready(function(server)
-    local opts = {}
+    local opts = {
+    }
 
     -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    --  if server.name == "gopls" then
-    --    opts.cmd = { "gopls" }
-    --    opts.filetypes = { "go", "gomod", "gotmpl"}
-    --    opts.root_dir = {"go.mod", ".git"}  
-    --    opts.single_file_support = true
-    --  end
-    -- end
+    if server.name == "gopls" then
+      opts = {
+        cmd = {'gopls'},
+        filetypes = {'go', 'gomod', 'gowork', 'gotmpl'},
+        root_dir = function(fname)
+          return util.root_pattern 'go.work'(fname) or util.root_pattern('go.mod', '.git')(fname)
+        end
+        
+      }
+    end
     -- This setup() function will take the provided server configuration and decorate it with the necessary properties
     -- before passing it onwards to lspconfig.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

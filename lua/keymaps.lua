@@ -100,7 +100,7 @@ nnoremap("<leader>fg", "<Cmd>Telescope live_grep<CR>")
 -- File explorer
 nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
 -- nnoremap("<leader>e", "<Cmd>RnvimrToggle<CR>")
-
+nnoremap("<leader>w", "<Cmd>NvimTreeFocus<CR>")
 
 -- EasyAlign
 -- xmap("ga", "<cmd>EasyAlign")
