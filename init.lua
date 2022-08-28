@@ -11,7 +11,7 @@ require'nvim-tree'.setup {
 require('lualine').setup()
 
 require('nvim-treesitter-config')
---require('lsp-config')
+require('hop').setup()
 require("mason").setup()
 require("mason-lspconfig").setup()
 
