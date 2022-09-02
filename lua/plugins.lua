@@ -26,8 +26,8 @@ return require('packer').startup(function(use)
   -- Themes
   -- use 'folke/tokyonight.nvim'
   -- use 'shaunsingh/moonlight.nvim'
-  use 'ellisonleao/gruvbox.nvim'
-
+  -- use 'ellisonleao/gruvbox.nvim'
+  use 'EdenEast/nightfox.nvim'
   -- Icons
   use "kyazdani42/nvim-web-devicons"
 
@@ -36,13 +36,15 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
   -- Status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  
   -- LSP and CMP 
   use {
     "williamboman/mason.nvim",

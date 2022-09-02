@@ -8,7 +8,11 @@ require('themes')
 require'nvim-tree'.setup {
   open_on_setup = true,
 }
-require('lualine').setup()
+require('lualine').setup{
+options = {
+    theme = 'nightfly'
+  }
+}
 
 require('nvim-treesitter-config')
 require('hop').setup()
