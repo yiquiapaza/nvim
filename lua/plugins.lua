@@ -64,19 +64,22 @@ return require('packer').startup(function(use)
 
   -- Neo vim tree
   use {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', opt = true -- optional, for file icon
+      'nvim-tree/nvim-web-devicons', opt = true -- optional, for file icon
     },
-    config = function() require'nvim-tree'.setup {
-      open_on_setup       = true,
-    } end
   }
 
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim'} 
+    },
+    config = function() require'telescope'.setup {
+      defaults = {
+        file_ignore_patterns = {"./node_modules/**", "node_modules", "^node_modules/*", "node_modules/*", }
+      }
+    } end
   }
  
   -- Hop is a new Easymotion, rewrite in lua
