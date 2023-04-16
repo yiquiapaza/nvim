@@ -1,6 +1,9 @@
 require("config.options")
 require("config.lazy")
-require("config.autocmds")
-if vim.fn.argc() == 0 then
-	
-end
+	vim.api.nvim_create_autocmd("User", {
+	  group = vim.api.nvim_create_augroup("LazyVim", { clear = true }),
+	  pattern = "VeryLazy",
+	  callback = function()
+      require("config.autocmds")
+	  end
+	})
