@@ -3,15 +3,15 @@ vim.g.snippets = "luasnip"
 
 local opt = vim.o
 
-opt.mouse = false
+--opt.mouse = false
 opt.number = true
 opt.relativenumber = true
 opt.conceallevel = 3
 opt.hidden = true
 opt.expandtab = true
-opt.tapstop = 4
+--opt.tapstop = 4
 opt.softtabstop = 4
-opt.shifindent = true
+--opt.shifindent = true
 opt.errorbells = false
 opt.wrap = false
 opt.swapfile = false
