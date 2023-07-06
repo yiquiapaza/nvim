@@ -8,11 +8,11 @@ return {
 	},
 	config = function()
 		require "nvim-treesitter.configs".setup {
-			ensure_installed = {"javascript", "typescript", "go", "rust", "zig", "java", "lua", "css", "yaml", "html", "kotlin", "tsx", "vue", "json", "org"},
+			ensure_installed = {"javascript", "typescript", "go", "rust", "zig", "java", "lua", "css", "yaml", "html", "kotlin", "tsx", "vue", "json", "org", "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore"},
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
-			},	
+			},
 			indent = {
 				enable = true
 			},
