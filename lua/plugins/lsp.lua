@@ -3,14 +3,23 @@ return {
   dependencies = {
     {
       "williamboman/mason.nvim",
-      build = ":MasonUpdate"
+      opts = {
+        ui = {
+          border = "rounded",
+        },
+      },
     },
-    "williamboman/mason-lspconfig.nvim",
+    {
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    {
+      "williamboman/mason-lspconfig.nvim",
+    },
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    "j-hui//fidget.nvim",
+    "j-hui/fidget.nvim",
   },
   event = "VeryLazy",
   config = function()
     require "yhonatan.lsp"
-  end
+  end,
 }

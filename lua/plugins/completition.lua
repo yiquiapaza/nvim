@@ -13,4 +13,8 @@ return {
     "windwp/nvim-autopairs",
     "hrsh7th/cmp-nvim-lsp-signature-help",
   },
+  event = "VeryLazy",
+  config = function()
+    require("yhonatan.completition")
+  end,
 }

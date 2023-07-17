@@ -1,20 +1,17 @@
-require("mason").setup({
-  ui = {
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
-  }
-})
+--require("mason").setup({
+--  ui = {
+--    icons = {
+--      package_installed = "✓",
+--      package_pending = "➜",
+--      package_uninstalled = "✗"
+--    }
+--  }
+--})
+local lspconfig = require("lspconfig")
+local servers = require("yhonatan.lsp.servers")
 
-require("mason-tool-installer").setup({
-  ensure_installed = {
-    "lua-language-server"
-  },
-  auto_update = false,
-  run_on_start = true,
-  start_delay = 3000,
-})
+for server, setup in pairs(servers) do
+  lspconfig[server].setup(setup())
+end
 
-require "yhonatan.lsp.server"
+require("yhonatan.lsp.mason")
