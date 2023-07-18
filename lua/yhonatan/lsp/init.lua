@@ -15,3 +15,4 @@ for server, setup in pairs(servers) do
 end
 
 require("yhonatan.lsp.mason")
+require("yhonatan.lsp.null-ls")

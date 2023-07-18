@@ -9,12 +9,8 @@ return {
         },
       },
     },
-    {
-      "jose-elias-alvarez/null-ls.nvim",
-    },
-    {
-      "williamboman/mason-lspconfig.nvim",
-    },
+    "jose-elias-alvarez/null-ls.nvim",
+    "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     "j-hui/fidget.nvim",
   },
