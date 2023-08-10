@@ -8,5 +8,15 @@ return {
     { "kyazdani42/nvim-web-devicons" },
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-ui-select.nvim" }
-  }
+  },
+  config = function ()
+    require("telescope").setup {
+      extensions = {
+        file_browser = {
+        },
+
+      },
+    }
+    require("telescope").load_extension "file_browser"
+  end
 }
