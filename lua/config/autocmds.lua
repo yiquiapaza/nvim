@@ -1,18 +1,22 @@
 -- Local Functions
-local function open_nvim_tree()
+--local function open_nvim_tree()
   -- open the tree
-  require("nvim-tree.api").tree.open()
+--  require("nvim-tree.api").tree.open()
+--end
+
+local function open_nvim_telescope()
+  require("telescope.builtin").find_browser()
 end
 
 -- Event loop fucntions
 --
-vim.api.nvim_create_autocmd({ "VimResized" }, { 
+vim.api.nvim_create_autocmd({ "VimResized" }, {
   callback = function()
     vim.cmd("tabdo wincmd =")
   end,
 })
 
-vim.api.nvim_create_autocmd({ "VimEnter" },{ callback = open_nvim_tree })
+vim.api.nvim_create_autocmd({ "VimEnter" },{ callback = open_nvim_telescope })
 
 -- close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {
