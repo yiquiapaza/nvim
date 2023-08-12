@@ -1,7 +1,8 @@
 return {
   "folke/trouble.nvim",
-  enabled = false,
-  dependencies = "kyazdani42/nvim-web-devicons",
-  keys = { { "<leader>t", "<cmd>TroubleToggle<cr>", desc = "Trouble toggle" } },
-  config = true,
+  cmd = { "TroubleToggle", "Trouble"},
+  dependencies = { "kyazdani42/nvim-web-devicons" },
+  opts = {
+    use_diagnostic_signs = false,
+  }
 }
