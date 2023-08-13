@@ -1,3 +1,5 @@
+-- Telescope
+
 vim.api.nvim_set_keymap(
   "n",
   "<space>fb",
@@ -5,9 +7,12 @@ vim.api.nvim_set_keymap(
   { noremap = true}
 )
 
+-- Trouble
+
 vim.api.nvim_set_keymap(
   "n",
   "<space>mm",
   ":Trouble document_diagnostics<CR>",
   { noremap = true }
 )
+

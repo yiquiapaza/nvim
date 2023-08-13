@@ -3,7 +3,7 @@ return {
   dependecies = {
     "nvim-lua/plenary.nvim"
   },
-  config = function() 
+  config = function()
     require("gitsigns").setup{
       signcolumn = true,
       numhl = false,
@@ -22,7 +22,6 @@ return {
         ignore_whitespace = false
       },
       current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
-      
     }
   end
 }
