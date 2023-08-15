@@ -61,7 +61,11 @@ ls.setup({
 
 
 ls.add_snippets("markdown", {
-  s("meta", fmt([[
+  s({
+    trig = "metadata",
+    name = "Research paper's metadata",
+    dscr = "Template of header paper, We use it to get all metadata for research paper."
+  }, fmt([[
   ---
   title: {}
   authors: {}
