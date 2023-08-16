@@ -75,10 +75,12 @@ ls.add_snippets("markdown", {
   event: {}
   tags: {}
   read: {}
+  target: {}
   ---
   ]],{
     i(1, "Title for paper"), i(2, "Authors' names"), i(3, "Digital Object Identifier"), i(4, "Web Source"),
-    i(5, "Year of publication"), i(6, "[Conference/Journal name, Abbreviation]"), i(7, "[Tags Abbreviation]"), i(8, "[Number of times this read was paper]")
+    i(5, "Year of publication"), i(6, "[Conference/Journal name, Abbreviation]"), i(7, "[Tags Abbreviation]"),
+    i(8, "[Number of times this read was paper]"), i(9, "[Target of our research]")
   }))
 })
 
