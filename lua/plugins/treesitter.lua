@@ -7,14 +7,35 @@ return {
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
 	config = function()
-		require "nvim-treesitter.configs".setup {
-			ensure_installed = {"javascript", "typescript", "go", "rust", "zig", "java", "lua", "css", "yaml", "html", "kotlin", "tsx", "vue", "json", "org", "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore"},
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"javascript",
+				"typescript",
+				"go",
+				"rust",
+				"zig",
+				"java",
+				"lua",
+				"css",
+				"yaml",
+				"html",
+				"kotlin",
+				"tsx",
+				"vue",
+				"json",
+				"org",
+				"git_config",
+				"git_rebase",
+				"gitattributes",
+				"gitcommit",
+				"gitignore",
+			},
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
 			},
 			indent = {
-				enable = true
+				enable = true,
 			},
 			incremental_selection = {
 				enable = true,
@@ -23,7 +44,7 @@ return {
 					node_incremental = "grn",
 					scope_incremental = "grc",
 					node_decremental = "grm",
-				}
+				},
 			},
 			refactor = {
 				highlight_definitions = { enable = true },
@@ -34,6 +55,6 @@ return {
 					},
 				},
 			},
-		}
-	end
+		})
+	end,
 }

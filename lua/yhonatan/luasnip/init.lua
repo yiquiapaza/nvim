@@ -59,13 +59,15 @@ ls.setup({
 	end,
 })
 
-
 ls.add_snippets("markdown", {
-  s({
-    trig = "metadata",
-    name = "Research paper's metadata",
-    dscr = "Template of header paper, We use it to get all metadata for research paper."
-  }, fmt([[
+	s(
+		{
+			trig = "metadata",
+			name = "Research paper's metadata",
+			dscr = "Template of header paper, We use it to get all metadata for research paper.",
+		},
+		fmt(
+			[[
   ---
   title: {}
   authors: {}
@@ -77,10 +79,18 @@ ls.add_snippets("markdown", {
   read: {}
   target: {}
   ---
-  ]],{
-    i(1, "Title for paper"), i(2, "Authors' names"), i(3, "Digital Object Identifier"), i(4, "Web Source"),
-    i(5, "Year of publication"), i(6, "[Conference/Journal name, Abbreviation]"), i(7, "[Tags Abbreviation]"),
-    i(8, "[Number of times this read was paper]"), i(9, "[Target of our research]")
-  }))
+  ]],
+			{
+				i(1, "Title for paper"),
+				i(2, "Authors' names"),
+				i(3, "Digital Object Identifier"),
+				i(4, "Web Source"),
+				i(5, "Year of publication"),
+				i(6, "[Conference/Journal name, Abbreviation]"),
+				i(7, "[Tags Abbreviation]"),
+				i(8, "[Number of times this read was paper]"),
+				i(9, "[Target of our research]"),
+			}
+		)
+	),
 })
-
