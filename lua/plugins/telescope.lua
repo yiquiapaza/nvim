@@ -10,6 +10,7 @@ return {
 		{ "nvim-telescope/telescope-ui-select.nvim" },
 	},
 	config = function()
+	  local actions = require("telescope.actions")
 		local trouble = require("trouble.providers.telescope")
 		require("telescope").setup({
 			extensions = {
@@ -46,6 +47,6 @@ return {
 			},
 		})
 		require("telescope").load_extension("file_browser")
-                require("telescope").load_extension("ui-select")
+		require("telescope").load_extension("ui-select")
 	end,
 }
