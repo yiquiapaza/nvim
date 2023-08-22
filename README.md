@@ -1,3 +1,4 @@
-# Personal config 
+# Personal configuration
 
-This is my personal config for neo vim with lua
+This is my personal configuration for NVIM with lua.
+

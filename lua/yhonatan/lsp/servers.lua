@@ -149,4 +149,26 @@ return {
 			flags = lsp_flags,
 		}
 	end,
+	["ltex"] = function()
+		return {
+			on_attach = lsp_attach,
+			flags = lsp_flags,
+			settings = {
+				ltex = {
+					language = "en-GB",
+				},
+			},
+			filetypes = {
+				"bib",
+				"gitcommit",
+				"markdown",
+				"org",
+				"plaintex",
+				"rst",
+				"rnoweb",
+				"tex",
+				"pandoc",
+			},
+		}
+	end,
 }
