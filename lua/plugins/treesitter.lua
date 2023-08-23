@@ -29,7 +29,12 @@ return {
 				"gitattributes",
 				"gitcommit",
 				"gitignore",
+				"norg",
 			},
+			modules = {},
+			ignore_install = {},
+			sync_install = {},
+			auto_install = {},
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
