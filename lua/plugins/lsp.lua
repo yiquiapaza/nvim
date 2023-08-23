@@ -16,6 +16,6 @@ return {
 	},
 	event = "VeryLazy",
 	config = function()
-		require("yhonatan.lsp")
+		require("core.lsp")
 	end,
 }

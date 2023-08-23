@@ -1,4 +1,4 @@
-local lsp_attach = require("yhonatan.lsp.attach")
+local lsp_attach = require("core.lsp.attach")
 
 local lsp_flags = {
 	debounce_text_changes = 150,
@@ -163,6 +163,7 @@ return {
 				"gitcommit",
 				"markdown",
 				"org",
+				"norg",
 				"plaintex",
 				"rst",
 				"rnoweb",

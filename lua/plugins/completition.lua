@@ -15,6 +15,6 @@ return {
 	},
 	event = "VeryLazy",
 	config = function()
-		require("yhonatan.completition")
+		require("core.completition")
 	end,
 }

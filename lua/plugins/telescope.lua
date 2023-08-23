@@ -10,15 +10,14 @@ return {
 		{ "nvim-telescope/telescope-ui-select.nvim" },
 	},
 	config = function()
-	  local actions = require("telescope.actions")
 		local trouble = require("trouble.providers.telescope")
 		require("telescope").setup({
 			extensions = {
 				["ui-select"] = {
-					require("telescope.themes").get_ivy({}),
+					require("telescope.themes").get_dropdown({}),
 				},
 				file_browser = {
-					theme = "ivy",
+					theme = "dropdown",
 					hijack_netrw = true,
 				},
 				fzf = {
@@ -26,6 +25,11 @@ return {
 					override_generic_sorter = true,
 					override_file_sorter = true,
 					case_mode = "smart_case",
+				},
+				pickers = {
+					find_files = {
+						prompt_prefix = "🔍",
+					},
 				},
 			},
 			defaults = {
@@ -48,5 +52,6 @@ return {
 		})
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("ui-select")
+		require("telescope").load_extension("notify")
 	end,
 }

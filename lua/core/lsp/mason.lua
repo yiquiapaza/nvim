@@ -1,6 +1,6 @@
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
-local servers = require("yhonatan.lsp.servers")
+local servers = require("core.lsp.servers")
 local lspconfig = require("lspconfig")
 
 mason.setup()
@@ -21,5 +21,5 @@ mason_lspconfig.setup({
 require("mason-tool-installer").setup({
 	ensure_installed = vim.tbl_filter(function(tool)
 		return vim.fn.executable(tool) == 0
-	end, require("yhonatan.lsp.tools")),
+	end, require("core.lsp.tools")),
 })

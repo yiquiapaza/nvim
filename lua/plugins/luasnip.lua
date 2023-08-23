@@ -4,6 +4,6 @@ return {
 	build = "make install_jsregexp",
 	event = "VeryLazy",
 	config = function()
-		require("yhonatan.luasnip")
+		require("core.luasnip")
 	end,
 }
