@@ -11,6 +11,7 @@ return {
 	},
 	config = function()
 		local trouble = require("trouble.providers.telescope")
+		local fb_actions = require("telescope").extensions.file_browser.actions
 		require("telescope").setup({
 			extensions = {
 				["ui-select"] = {
@@ -45,8 +46,17 @@ return {
 					"--glob '!.git'",
 				},
 				mappings = {
-					i = { ["<c-t>"] = trouble.open_with_trouble },
-					n = { ["<c-t>"] = trouble.open_with_trouble },
+					i = {
+						["<C-t>"] = trouble.open_with_trouble,
+						["<C-c>"] = fb_actions.create,
+						["<A-r>"] = fb_actions.rename,
+						["<C-y>"] = fb_actions.copy,
+						["<C-m>"] = fb_actions.move,
+						["<C-d>"] = fb_actions.remove,
+						["<C-f>"] = fb_actions.toggle_browser,
+						["<C-h>"] = fb_actions.toggle_hidden,
+					},
+					n = { ["<C-t>"] = trouble.open_with_trouble },
 				},
 			},
 		})

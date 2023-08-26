@@ -1,2 +1,2 @@
-set textwidth=71
-set fo+=t
+setlocal textwidth=71
+setlocal fo+=aw
