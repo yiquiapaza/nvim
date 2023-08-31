@@ -163,12 +163,20 @@ return {
 				"gitcommit",
 				"markdown",
 				"org",
-				"norg",
 				"plaintex",
 				"rst",
 				"rnoweb",
 				"tex",
 				"pandoc",
+			},
+		}
+	end,
+	["astro"] = function()
+		return {
+			on_attach = lsp_attach,
+			flags = lsp_flags,
+			filetypes = {
+				"astro",
 			},
 		}
 	end,

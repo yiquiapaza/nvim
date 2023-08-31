@@ -29,7 +29,7 @@ return {
 				"gitattributes",
 				"gitcommit",
 				"gitignore",
-				"norg",
+				"astro",
 			},
 			modules = {},
 			ignore_install = {},
