@@ -60,12 +60,15 @@ return {
 	["marksman"] = default,
 	["pyright"] = default,
 	["html"] = function()
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
 		local config = {
 			on_attach = lsp_attach,
 			flags = lsp_flags,
+			capabilities = capabilities,
 		}
-		if vim.fn.executable("html-languageserver") == 1 then
-			config.cmd = { "html-languageserver", "--stdio" }
+		if vim.fn.executable("html-language-server") == 1 then
+			config.cmd = { "html-language-server", "--stdio" }
 		end
 		return config
 	end,
