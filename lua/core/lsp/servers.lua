@@ -183,4 +183,21 @@ return {
 			},
 		}
 	end,
+	["eslint"] = function()
+		return {
+			on_attach = lsp_attach,
+			flags = lsp_flags,
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"javascript.jsx",
+				"typescript",
+				"typescriptreact",
+				"typescript.tsx",
+				"vue",
+				"svelte",
+				"astro",
+			},
+		}
+	end,
 }

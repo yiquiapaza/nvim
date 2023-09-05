@@ -20,6 +20,7 @@ return {
 				file_browser = {
 					theme = "dropdown",
 					hijack_netrw = true,
+					hidden = true,
 				},
 				fzf = {
 					fuzzy = true,
@@ -30,7 +31,11 @@ return {
 				pickers = {
 					find_files = {
 						prompt_prefix = "🔍",
+						hidden = true,
 					},
+				},
+				find_hidden = {
+					hidden = true,
 				},
 			},
 			defaults = {
@@ -39,11 +44,10 @@ return {
 					"--color=never",
 					"--no-heading",
 					"--with-filename",
-					"--line_number",
+					"--line-number",
 					"--column",
-					"--hidden",
 					"--smart-case",
-					"--glob '!.git'",
+					"-uu", -- **This is the setting not being respected**
 				},
 				mappings = {
 					i = {
