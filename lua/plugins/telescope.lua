@@ -9,6 +9,12 @@ return {
 		{ "nvim-telescope/telescope-file-browser.nvim" },
 		{ "nvim-telescope/telescope-ui-select.nvim" },
 	},
+	keys = {
+		{ "<leader>fb", ":Telescope file_browser<CR>", desc = "Telescope File Browser" },
+		{ "<leader>ff", ":Telescope find_files<CR>", desc = "Telescope File Files" },
+		-- vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
+		-- vim.api.nvim_set_keymap("n", "<space>ff", ":Telescope find_files<CR>", { noremap = true })
+	},
 	config = function()
 		local trouble = require("trouble.providers.telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions

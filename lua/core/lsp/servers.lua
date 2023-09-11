@@ -200,4 +200,13 @@ return {
 			},
 		}
 	end,
+	["kotlin_language_server"] = function()
+		return {
+			on_attach = lsp_attach,
+			flags = lsp_flags,
+			filetypes = {
+				"kotlin",
+			},
+		}
+	end,
 }
