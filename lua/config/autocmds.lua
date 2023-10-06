@@ -16,7 +16,9 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 })
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
-    callback = open_nvim_telescope,
+    callback = function()
+        open_nvim_telescope()
+    end,
 })
 
 -- close some filetypes with <q>
