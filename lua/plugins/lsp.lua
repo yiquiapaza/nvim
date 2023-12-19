@@ -14,11 +14,17 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         "j-hui/fidget.nvim",
     },
-    opts = {
-        inlay_hints = { enabled = true },
+    wants = {
+        "inlay-hints.nvim",
     },
     event = "VeryLazy",
     config = function()
         require "core.lsp"
     end,
+    requires = {
+        "simrat/inlay-hints.nvim",
+        config = function()
+            require("inlay-hints").setup()
+        end,
+    },
 }

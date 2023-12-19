@@ -86,6 +86,19 @@ return {
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
+            settings = {
+                gopls = {
+                    hints = {
+                        assignVariableTypes = true,
+                        compositeLiteralFields = true,
+                        compositeLiteralTypes = true,
+                        constantValues = true,
+                        functionTypeParameters = true,
+                        parameterNames = true,
+                        rangeVariableTypes = true,
+                    },
+                },
+            },
         }
     end,
     ["rust_analyzer"] = function()
