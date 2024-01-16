@@ -179,7 +179,6 @@ return {
                 "gitcommit",
                 "markdown",
                 "org",
-                "norg",
                 "plaintex",
                 "rst",
                 "rnoweb",

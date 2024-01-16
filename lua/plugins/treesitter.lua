@@ -30,6 +30,8 @@ return {
                 "gitcommit",
                 "gitignore",
                 "astro",
+                "latex",
+                "toml",
             },
             modules = {},
             ignore_install = {},
