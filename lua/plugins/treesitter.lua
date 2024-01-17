@@ -32,6 +32,7 @@ return {
                 "astro",
                 "latex",
                 "toml",
+                "markdown_inline",
             },
             modules = {},
             ignore_install = {},
