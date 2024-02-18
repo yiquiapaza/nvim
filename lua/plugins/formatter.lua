@@ -12,6 +12,9 @@ return {
                 lua = {
                     require("formatter.filetypes.lua").stylua(),
                 },
+                tex = {
+                    require("formatter.filetypes.tex").latexindent(),
+                },
                 -- html = {
                 -- 	function()
                 -- 		return {

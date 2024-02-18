@@ -222,4 +222,15 @@ return {
             },
         }
     end,
+    ["texlab"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+            filetypes = {
+                "tex",
+                "plaintex",
+                "bib",
+            },
+        }
+    end,
 }

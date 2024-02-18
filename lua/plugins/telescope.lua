@@ -4,10 +4,10 @@ return {
     dependencies = {
         { "nvim-lua/plenary.nvim" },
         { "nvim-lua/popup.nvim" },
-        { "nvim-telescope/telescope-fzy-native.nvim" },
         { "kyazdani42/nvim-web-devicons" },
         { "nvim-telescope/telescope-file-browser.nvim" },
         { "nvim-telescope/telescope-ui-select.nvim" },
+        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     keys = {
         { "<leader>fb", ":Telescope file_browser<CR>", desc = "Telescope File Browser" },
@@ -76,5 +76,6 @@ return {
         require("telescope").load_extension "file_browser"
         require("telescope").load_extension "ui-select"
         require("telescope").load_extension "notify"
+        require("telescope").load_extension "fzf"
     end,
 }
