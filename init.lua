@@ -1,3 +1,7 @@
 -- Load all config files
-require("config")
-require("core.globals")
+-- vim.filetype.add { extension = { mdx = "mdx" } }
+-- vim.treesitter.language.register("markdown", "mdx")
+
+require "config"
+require "core.globals"
+
