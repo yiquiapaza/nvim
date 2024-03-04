@@ -3,6 +3,7 @@ local lspkind = require "lspkind"
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#FF0000" })
 
 cmp.setup {
     snippet = {
@@ -10,7 +11,10 @@ cmp.setup {
             require("luasnip").lsp_expand(args.body)
         end,
     },
-    window = {},
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp.mapping.preset.insert {
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),

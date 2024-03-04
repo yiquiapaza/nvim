@@ -62,24 +62,44 @@ ls.setup {
 ls.add_snippets("markdown", {
     s(
         {
-            trig = "metadata",
+            trig = "paper note template",
             name = "Research paper's metadata",
             dscr = "Template of header paper, We use it to get all metadata for research paper.",
         },
         fmt(
             [[
-  ---
-  title: {}
-  authors: {}
-  DOI: {}
-  URL: {}
-  year: {}
-  event: {}
-  tags: {}
-  read: {}
-  target: {}
-  ---
-  ]],
+            ---
+            title: {}
+            authors: {}
+            DOI: {}
+            URL: {}
+            year: {}
+            event: {}
+            tags: {}
+            read: {}
+            target: {}
+            ---
+
+            # The abstract
+
+            {}
+
+            ## Main Idea
+
+            {}
+
+            ## Paper Structure
+
+            {}
+
+            ## Experiment or Use Cases
+
+            {}
+
+            ## Discussions and Conclusions
+
+            {}
+        ]],
             {
                 i(1, "Title for paper"),
                 i(2, "Authors' names"),
@@ -90,6 +110,56 @@ ls.add_snippets("markdown", {
                 i(7, "[Tags Abbreviation]"),
                 i(8, "[Number of times this read was paper]"),
                 i(9, "[Target of our research]"),
+                i(10, "Rewrite the abstract with our words"),
+                i(11, "Write the main idea or the proposal for this paper"),
+                i(12, "Try to summary the paper structure with our words"),
+                i(13, "Describe the experiment or use cases with our words"),
+                i(14, "Summary the discussions with the conclusions with our words"),
+            }
+        )
+    ),
+})
+
+ls.add_snippets("markdown", {
+    s(
+        {
+            trig = "paper draft notes",
+            name = "Draft Note",
+            dscr = "Template draft notes for a research paper",
+        },
+        fmt(
+            [[
+            # The proposal
+
+            {}
+
+            ## Use cases or experiment
+
+            {}
+
+            ### Tasks
+
+            {}
+
+            ### Interaction
+
+            {}
+
+            ## References
+
+            {}
+
+            ## Draft Structure
+
+            {}
+        ]],
+            {
+                i(1, "Write a draft with our proposal, try to be short and clear"),
+                i(2, "Describe our experiment or use cases and write about that"),
+                i(3, "Describe the future tasks that we should implementes in the future"),
+                i(4, "Describe the interaction that we gonna do"),
+                i(5, "Link the references and write about that"),
+                i(6, "Describe our paper structure"),
             }
         )
     ),
