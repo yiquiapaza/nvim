@@ -233,4 +233,18 @@ return {
             },
         }
     end,
+    ["ocamllsp"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+            filetypes = {
+                "ocaml",
+                "menhir",
+                "ocamlinterface",
+                "ocamllex",
+                "reason",
+                "dune",
+            },
+        }
+    end,
 }

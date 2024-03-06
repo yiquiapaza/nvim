@@ -11,6 +11,8 @@ return {
             "RainbowGreen",
             "RainbowViolet",
             "RainbowCyan",
+            "CursorColumn",
+            "Whitespace",
         }
 
         local hooks = require "ibl.hooks"
@@ -27,6 +29,7 @@ return {
         end)
         require("ibl").setup {
             indent = { highlight = highlight, char = "▎", tab_char = nil, priority = 1 },
+            whitespace = { highlight = highlight, remove_blankline_trail = false },
             scope = { enabled = true },
         }
     end,
