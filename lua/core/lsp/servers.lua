@@ -184,6 +184,7 @@ return {
                 "rnoweb",
                 "tex",
                 "pandoc",
+                "md",
             },
         }
     end,

@@ -5,18 +5,10 @@
 --end
 -- Event loop fucntions
 --
-local function open_nvim_telescope()
-    require("telescope.builtin").find_browser()
-end
-
 vim.api.nvim_create_autocmd({ "VimResized" }, {
     callback = function()
         vim.cmd "tabdo wincmd ="
     end,
-})
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
-    callback = open_nvim_telescope
 })
 
 -- close some filetypes with <q>
