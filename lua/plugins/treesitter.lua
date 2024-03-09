@@ -36,6 +36,7 @@ return {
                 "markdown_inline",
                 "elixir",
                 "tsx",
+                "toml",
             },
             modules = {},
             ignore_install = {},

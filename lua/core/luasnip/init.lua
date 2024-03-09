@@ -164,3 +164,21 @@ ls.add_snippets("markdown", {
         )
     ),
 })
+
+ls.add_snippets("markdown", {
+    s(
+        {
+            trig = "date",
+            name = "Date",
+            dscr = "Get date",
+        },
+        fmt(
+            [[
+            {}
+        ]],
+            {
+                i(1, "Date: " .. os.date "%x"),
+            }
+        )
+    ),
+})
