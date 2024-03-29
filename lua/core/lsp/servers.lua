@@ -232,6 +232,31 @@ return {
                 "plaintex",
                 "bib",
             },
+            settings = {
+                texlab = {
+                    auxDirectory = ".",
+                    bibtexFormatter = "texlab",
+                    build = {
+                        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+                        executable = "latexmk",
+                        forwardSearchAfter = false,
+                        onSave = false,
+                    },
+                    chktex = {
+                        onEdit = false,
+                        onOpenAndSave = false,
+                    },
+                    diagnosticsDelay = 300,
+                    formatterLineLength = 80,
+                    forwardSearch = {
+                        args = {},
+                    },
+                    latexFormatter = "latexindent",
+                    latexindent = {
+                        modifyLineBreaks = false,
+                    },
+                },
+            },
         }
     end,
     ["ocamllsp"] = function()
@@ -246,6 +271,12 @@ return {
                 "reason",
                 "dune",
             },
+        }
+    end,
+    ["jdtls"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
         }
     end,
 }

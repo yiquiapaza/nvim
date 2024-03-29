@@ -112,9 +112,9 @@ ls.add_snippets("markdown", {
                 i(9, "[Target of our research]"),
                 i(10, "Rewrite the abstract with our words"),
                 i(11, "Write the main idea or the proposal for this paper"),
-                i(12, "Try to summary the paper structure with our words"),
+                i(12, "Try to summarize the paper structure with our words"),
                 i(13, "Describe the experiment or use cases with our words"),
-                i(14, "Summary the discussions with the conclusions with our words"),
+                i(14, "summarize the discussions with the conclusions with our words"),
             }
         )
     ),
