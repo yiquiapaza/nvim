@@ -57,7 +57,12 @@ return {
             },
         }
     end,
-    ["marksman"] = default,
+    ["marksman"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+        }
+    end,
     ["pyright"] = default,
     ["html"] = function()
         local capabilities = vim.lsp.protocol.make_client_capabilities()
