@@ -16,7 +16,7 @@ return {
         -- vim.api.nvim_set_keymap("n", "<space>ff", ":Telescope find_files<CR>", { noremap = true })
     },
     config = function()
-        local trouble = require "trouble.providers.telescope"
+        local trouble = require "trouble.sources.telescope"
         local fb_actions = require("telescope").extensions.file_browser.actions
         require("telescope").setup {
             extensions = {
@@ -69,7 +69,7 @@ return {
                         ["<C-f>"] = fb_actions.toggle_browser,
                         ["<C-h>"] = fb_actions.toggle_hidden,
                     },
-                    n = { ["<C-t>"] = trouble.open_with_trouble },
+                    n = { ["<C-t>"] = trouble.open },
                 },
             },
         }
