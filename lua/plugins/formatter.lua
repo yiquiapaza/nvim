@@ -5,6 +5,7 @@ return {
         -- vim.api.nvim_set_keymap("n", "<space>p", ":Format<CR>", { noremap = true })
     },
     config = function()
+        local util = require "formatter.util"
         require("formatter").setup {
             loggin = true,
             log_level = vim.log.levels.WARN,
@@ -46,6 +47,27 @@ return {
                 },
                 ["*"] = {
                     require("formatter.filetypes.any").remove_trailing_whitespace,
+                },
+                go = {
+                    function()
+                        return {
+                            exe = "gofumpt -l -w",
+                            arg = { vim.api.nvim_buf_get_name(0) },
+                        }
+                    end,
+                    function()
+                        return {
+                            exe = "goimports-reviser -rm-unused -set-alias -format",
+                            args = { vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end,
+                    function ()
+                        return {
+                            exe = "golines",
+                            args = { vim.api.nvim_buf_get_name(0), "-w"}
+                        }
+                    end
                 },
             },
         }
