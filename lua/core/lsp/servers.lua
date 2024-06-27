@@ -284,4 +284,14 @@ return {
             flags = lsp_flags,
         }
     end,
+    ["golangci_lint_ls"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+            filetypes = {
+                "go",
+                "gomod",
+            },
+        }
+    end,
 }
