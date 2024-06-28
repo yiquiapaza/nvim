@@ -32,7 +32,9 @@ return {
     end,
     ["volar"] = default,
     ["lua_ls"] = function()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
         return {
+            capabilities = capabilities,
             on_attach = lsp_attach,
             flags = lsp_flags,
             settings = {

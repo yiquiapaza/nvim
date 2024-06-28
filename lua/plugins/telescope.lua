@@ -12,6 +12,9 @@ return {
     keys = {
         { "<leader>fb", ":Telescope file_browser<CR>", desc = "Telescope File Browser" },
         { "<leader>ff", ":Telescope find_files<CR>", desc = "Telescope File Files" },
+        { "<leader>fg", ":Telescope live_grep<CR>", desc = "Telescope Live Grep" },
+        { "<leader>fu", ":Telescope buffers<CR>", desc = "Telescope Buffers" },
+        { "<leader>fh", ":Telescope help_tags<CR>", desc = "Telescope Help Tags" },
         -- vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
         -- vim.api.nvim_set_keymap("n", "<space>ff", ":Telescope find_files<CR>", { noremap = true })
     },
