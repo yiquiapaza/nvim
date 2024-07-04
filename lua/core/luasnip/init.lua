@@ -177,7 +177,31 @@ ls.add_snippets("markdown", {
             {}
         ]],
             {
-                i(1, "Date: " .. os.date "%x"),
+                i(1, "Date: " .. os.date "%n"),
+            }
+        )
+    ),
+})
+
+ls.add_snippets("markdown", {
+    s(
+        {
+            trig = "book simple metadata",
+            name = "Simple Metadata",
+            dscr = "get simple metadata",
+        },
+        fmt(
+            [[
+            ---
+            book title: {}
+            language: {}
+            author: {}
+            ---
+            ]],
+            {
+                i(1, "Book Title"),
+                i(2, "Book Language"),
+                i(3, "Book Author"),
             }
         )
     ),
