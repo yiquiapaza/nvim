@@ -30,7 +30,24 @@ return {
             filetypes = { "css", "scss", "less" },
         }
     end,
-    ["volar"] = default,
+    ["volar"] = function ()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+            filetypes = { "typescript", "javascript", "vue"},
+            capabilities = capabilities,
+            init_options ={
+                vue = {
+                    hybridMode = false,
+                },
+                typescript = {
+                    tsdk = "/home/yhonatan/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/"
+                    -- tsdk = vim.fn.getcwd() .. "node_modules/typescript/lib"
+                }
+            }
+        }
+    end,
     ["lua_ls"] = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
         return {
@@ -136,7 +153,7 @@ return {
             filetype = { "html" },
         }
     end,
-    ["tsserver"] = function()
+    ["ts_ls"] = function()
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
