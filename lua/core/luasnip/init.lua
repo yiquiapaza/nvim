@@ -219,7 +219,7 @@ ls.add_snippets("markdown", {
             ---
             Title: {}
             Target: {}
-            Source (url, or doi): {}
+            Source: {}
             Tags: {}
             ---
 
