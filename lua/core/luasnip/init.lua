@@ -212,8 +212,33 @@ ls.add_snippets("markdown", {
         {
             trig = "Zettelkasten",
             name = "Zettelkasten Notes",
-            dscr = "Simple note to use get ideas or get information about a specific field. User for paper, book, and other source of information"
-        }
-    )
-})
+            dscr = "Simple note to use get ideas or get information about a specific field. Use it for paper, book, and other source of information",
+        },
+        fmt(
+            [[
+            ---
+            Title: {}
+            Target: {}
+            Source (url, or doi): {}
+            Tags: {}
+            ---
 
+            # Abstract
+
+            {}
+
+            ## Ideas
+
+            {}
+            ]],
+            {
+                i(1, "Title of paper, book, or other source of information."),
+                i(2, "Where are we use this information?. Example conference, or journal."),
+                i(3, "What is the source?. Example ieee, acm, etc."),
+                i(4, "What is the fields of research."),
+                i(5, "A brief summary of the Abstract."),
+                i(6, "List the ideas that are important."),
+            }
+        )
+    ),
+})
