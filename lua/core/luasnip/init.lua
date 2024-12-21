@@ -206,3 +206,14 @@ ls.add_snippets("markdown", {
         )
     ),
 })
+
+ls.add_snippets("markdown", {
+    s(
+        {
+            trig = "Zettelkasten",
+            name = "Zettelkasten Notes",
+            dscr = "Simple note to use get ideas or get information about a specific field. User for paper, book, and other source of information"
+        }
+    )
+})
+
