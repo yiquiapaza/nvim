@@ -223,12 +223,56 @@ ls.add_snippets("markdown", {
             Tags: {}
             ---
 
-            # Abstract
+            # The First Pass
 
-            {}
+            The first pass is adequate for papers that are not in your research area, but may someday prove relevant.
 
-            ## Ideas
+            - [] Read the title, abstract, and the introduction.
+            - [] Read the section and sub-section headings, but ignore everything else.
+            - [] Read the conclusions.
+            - [] Read five minutes.
 
+            ## Answers the Following Questions
+
+            ### Category
+
+            - [] What type of paper is this?
+
+            - [] A measurement paper?
+
+            - [] An analysis of an existing system?
+
+            - [] A description of reasearch prototype?
+
+            ### Context
+
+            - [] Which other paper is it related to?
+
+            - [] Which theoetical bases were used to analyze the problem?
+
+            ### Correctness
+
+            - [] Do the assumptions appear to be valid?
+
+            ### Contributions
+
+            - [] What are the paper's main contributions?
+
+            # The Second Pass
+
+            This level of detail is appropriate for a paper in which you are interested, but does not lie in
+            **your research speciality**
+
+            - [] Mark relevant unread references for further reading.
+            - [] Look up the results, understand it, and write the most important parts.
+            - [] Summarize the main thrust of the paper.
+            - [] Read about an hour.
+
+            ## Summary
+
+            # The Third Pass
+
+            To fully understand a paper
             {}
             ]],
             {
