@@ -228,7 +228,7 @@ ls.add_snippets("markdown", {
             The first pass is adequate for papers that are not in your research area, but may someday prove relevant.
 
             - [] Read the title, abstract, and the introduction.
-            - [] Read the section and sub-section headings, but ignore everything else.
+            - [] Read the section and subsection headings, but ignore everything else.
             - [] Read the conclusions.
             - [] Read five minutes.
 
@@ -242,13 +242,13 @@ ls.add_snippets("markdown", {
 
             - [] An analysis of an existing system?
 
-            - [] A description of reasearch prototype?
+            - [] A description of research prototype?
 
             ### Context
 
             - [] Which other paper is it related to?
 
-            - [] Which theoetical bases were used to analyze the problem?
+            - [] Which theoretical bases were used to analyse the problem?
 
             ### Correctness
 
@@ -275,8 +275,8 @@ ls.add_snippets("markdown", {
             To fully understand a paper
 
             - [] Read about five hours for beginners, and about an hour for an experienced reader.
-            - [] Identify the streghts and weaknesses of the paper.
-            - [] pinpoint implicit assumptions, missing citations to relevant work, and potential issues with
+            - [] Identify the strengths and weaknesses of the paper.
+            - [] Pinpoint implicit assumptions, missing citations to relevant work, and potential issues with
             experimental or analytical techniques.
 
             ]],
