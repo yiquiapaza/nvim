@@ -273,15 +273,18 @@ ls.add_snippets("markdown", {
             # The Third Pass
 
             To fully understand a paper
-            {}
+
+            - [] Read about five hours for beginners, and about an hour for an experienced reader.
+            - [] Identify the streghts and weaknesses of the paper.
+            - [] pinpoint implicit assumptions, missing citations to relevant work, and potential issues with
+            experimental or analytical techniques.
+
             ]],
             {
                 i(1, "Title of paper, book, or other source of information."),
                 i(2, "Where are we use this information?. Example conference, or journal."),
                 i(3, "What is the source?. Example ieee, acm, etc."),
                 i(4, "What is the fields of research."),
-                i(5, "A brief summary of the Abstract."),
-                i(6, "List the ideas that are important."),
             }
         )
     ),
