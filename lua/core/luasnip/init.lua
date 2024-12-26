@@ -238,7 +238,7 @@ ls.add_snippets("markdown", {
 
             - [] What type of paper is this?
 
-            - [] A measurement paper?
+            - [] A measurement in the paper?
 
             - [] An analysis of an existing system?
 
