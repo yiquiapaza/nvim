@@ -227,10 +227,9 @@ ls.add_snippets("markdown", {
 
             The first pass is adequate for papers that are not in your research area, but may someday prove relevant.
 
-            - [] Read the title, abstract, and the introduction.
+            - [] Read the title, abstract, the introduction, and conclusions.
+            - [] Spend at least five minutes reviewing the above sections.
             - [] Read the section and subsection headings, but ignore everything else.
-            - [] Read the conclusions.
-            - [] Read five minutes.
 
             ## Answers the Following Questions
 
