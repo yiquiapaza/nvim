@@ -1,4 +1,5 @@
 local lsp_attach = require "core.lsp.attach"
+local mason_registry = require "mason-registry"
 
 local lsp_flags = {
     debounce_text_changes = 150,
@@ -30,7 +31,56 @@ return {
             filetypes = { "css", "scss", "less" },
         }
     end,
-    ["volar"] = default,
+    ["volar"] = function()
+        return {
+            on_attach = lsp_attach,
+            flags = lsp_flags,
+            init_options = {
+                plugins = {
+                    {
+                        vue = {
+                            hybridmode = false,
+                        },
+                    },
+                },
+            },
+            filetypes = { "vue" },
+        }
+    end,
+    -- function()
+    -- return {
+    --     on_attach = lsp_attach,
+    --     flags = lsp_flags,
+    --     init_options = {
+    --         vue = {
+    --             hybridMode = false,
+    --         },
+    --     },
+    --     settings = {
+    --         typescript = {
+    --             inlayHints = {
+    --                 enumMemberValues = {
+    --                     enabled = true,
+    --                 },
+    --                 functionLikeReturnTypes = {
+    --                     enabled = true,
+    --                 },
+    --                 propertyDeclarationTypes = {
+    --                     enabled = true,
+    --                 },
+    --                 parameterTypes = {
+    --                     enabled = true,
+    --                     suppressWhenArgumentMatchesName = true,
+    --                 },
+    --                 variableTypes = {
+    --                     enabled = true,
+    --                 },
+    --             },
+    --         },
+    --     },
+    --     filetypes = { "typescript", "javascript", "vue" },
+    -- }
+    -- end,
     ["lua_ls"] = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
         return {
@@ -133,50 +183,46 @@ return {
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
-            filetype = { "html" },
         }
     end,
     ["ts_ls"] = function()
+        -- local vue_language_sever_path = mason_registry.get_package("vue-language-server"):get_install_path()
+        --     .. "/home/yhonatan/.nvm/versions/node/v20.18.0/lib/node_modules/@vue/language-server"
+        local vue_language_sever_path =
+            "/home/yhonatan/.nvm/versions/node/v20.18.0/lib/node_modules/@vue/language-server"
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
-            filetypes = {
-                "javascript",
-                "typescript",
-                "vue",
-            },
             init_options = {
                 plugins = {
                     {
                         name = "@vue/typescript-plugin",
-                        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-                        languages = { "javascript", "typescript", "vue" },
+                        location = vue_language_sever_path,
+                        languages = { "vue" },
                     },
                 },
             },
-            settings = {
-                typescript = {
-                    inlayHints = {
-                        includeInlayParameterNameHints = "all",
-                        includeInlayParameterNameHitsWhenArgumentMatchesName = true,
-                        includeInlayFunctionParameterTypeHints = true,
-                        includeInlayVariableTypeHints = true,
-                        includeInlayPropertyDeclarationTypeHints = true,
-                        includeInlayFunctionLikeReturnTypeHints = true,
-                        includeInlayEnumMemberValueHints = true,
-                    },
-                },
-                javascript = {
-                    inlayHints = {
-                        includeInlayParameterNameHints = "all",
-                        includeInlayParameterNameHitsWhenArgumentMatchesName = true,
-                        includeInlayFunctionParameterTypeHints = true,
-                        includeInlayVariableTypeHints = true,
-                        includeInlayPropertyDeclarationTypeHints = true,
-                        includeInlayFunctionLikeReturnTypeHints = true,
-                        includeInlayEnumMemberValueHints = true,
-                    },
-                },
+            -- settings = {
+            --     typescript = {
+            --         tsserver = {
+            --             useSyntaxServer = false,
+            --         },
+            --         inlayHints = {
+            --             includeInlayParameterNameHints = "all",
+            --             includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            --             includeInlayFunctionParameterTypeHints = true,
+            --             includeInlayVariableTypeHints = true,
+            --             includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+            --             includeInlayPropertyDeclarationTypeHints = true,
+            --             includeInlayFunctionLikeReturnTypeHints = true,
+            --             includeInlayEnumMemberValueHints = true,
+            --         },
+            --     },
+            -- },
+            filetypes = {
+                "vue",
+                "javascript",
+                "typescript",
             },
         }
     end,
