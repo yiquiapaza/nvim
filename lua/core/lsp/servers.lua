@@ -30,24 +30,7 @@ return {
             filetypes = { "css", "scss", "less" },
         }
     end,
-    ["volar"] = function ()
-        local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-        return {
-            on_attach = lsp_attach,
-            flags = lsp_flags,
-            filetypes = { "typescript", "javascript", "vue"},
-            capabilities = capabilities,
-            init_options ={
-                vue = {
-                    hybridMode = false,
-                },
-                typescript = {
-                    tsdk = "/home/yhonatan/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/"
-                    -- tsdk = vim.fn.getcwd() .. "node_modules/typescript/lib"
-                }
-            }
-        }
-    end,
+    ["volar"] = default,
     ["lua_ls"] = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
         return {
@@ -157,6 +140,20 @@ return {
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
+            filetypes = {
+                "javascript",
+                "typescript",
+                "vue",
+            },
+            init_options = {
+                plugins = {
+                    {
+                        name = "@vue/typescript-plugin",
+                        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+                        languages = { "javascript", "typescript", "vue" },
+                    },
+                },
+            },
             settings = {
                 typescript = {
                     inlayHints = {
