@@ -32,6 +32,13 @@ return {
                         }
                     end,
                 },
+                astro = {
+                    function()
+                        return {
+                            exe = "npx @biomejs/biome format --write ./src",
+                        }
+                    end,
+                },
                 javascript = {
                     require("formatter.filetypes.javascript").prettier(),
                 },
@@ -62,12 +69,12 @@ return {
                             stdin = true,
                         }
                     end,
-                    function ()
+                    function()
                         return {
                             exe = "golines",
-                            args = { vim.api.nvim_buf_get_name(0), "-w"}
+                            args = { vim.api.nvim_buf_get_name(0), "-w" },
                         }
-                    end
+                    end,
                 },
             },
         }
