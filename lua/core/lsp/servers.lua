@@ -232,7 +232,7 @@ return {
             flags = lsp_flags,
         }
     end,
-    ["ltex"] = function()
+    ["ltex_plus"] = function()
         return {
             on_attach = lsp_attach,
             flags = lsp_flags,
