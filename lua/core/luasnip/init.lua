@@ -69,52 +69,28 @@ ls.add_snippets("markdown", {
         fmt(
             [[
             ---
-            title: {}
-            authors: {}
-            DOI: {}
-            URL: {}
-            year: {}
-            event: {}
-            tags: {}
-            read: {}
-            target: {}
+            Title: {}
+            Source (URL or DOI): {}
+            Tags: {}
+            Event: {}
+            Target: {}
             ---
 
-            # The abstract
+            # Main Idea
 
-            {}
-
-            ## Main Idea
-
-            {}
-
-            ## Paper Structure
-
-            {}
 
             ## Experiment or Use Cases
 
-            {}
 
-            ## Discussions and Conclusions
+            ## Quotes
 
-            {}
         ]],
             {
-                i(1, "Title for paper"),
-                i(2, "Authors' names"),
-                i(3, "Digital Object Identifier"),
-                i(4, "Web Source"),
-                i(5, "Year of publication"),
-                i(6, "[Conference/Journal name, Abbreviation]"),
-                i(7, "[Tags Abbreviation]"),
-                i(8, "[Number of times this read was paper]"),
-                i(9, "[Target of our research]"),
-                i(10, "Rewrite the abstract with our words"),
-                i(11, "Write the main idea or the proposal for this paper"),
-                i(12, "Try to summarize the paper structure with our words"),
-                i(13, "Describe the experiment or use cases with our words"),
-                i(14, "summarize the discussions with the conclusions with our words"),
+                i(1, "Research paper title"),
+                i(2, "URL or DOI"),
+                i(3, "Tags, for example Visualization, Data Analysis, AR, VR, Interaction, etc."),
+                i(4, "Event, is where the research paper was published"),
+                i(5, "Target, is where we want to publish our research paper"),
             }
         )
     ),
