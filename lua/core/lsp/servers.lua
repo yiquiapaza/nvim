@@ -110,10 +110,15 @@ return {
         }
     end,
     ["marksman"] = function()
-        return {
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        local config = {
             on_attach = lsp_attach,
             flags = lsp_flags,
+            capabilities = capabilities,
+            filetypes = { "markdown" },
         }
+        return config
     end,
     ["pyright"] = default,
     ["html"] = function()
