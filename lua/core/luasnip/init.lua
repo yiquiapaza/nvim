@@ -132,8 +132,8 @@ ls.add_snippets("markdown", {
             {
                 i(1, "Write a draft with our proposal, try to be short and clear"),
                 i(2, "Describe our experiment or use cases and write about that"),
-                i(3, "Describe the future tasks that we should implementes in the future"),
-                i(4, "Describe the interaction that we gonna do"),
+                i(3, "Describe the future tasks that we should implement in the future"),
+                i(4, "Describe the interaction that we are going to do"),
                 i(5, "Link the references and write about that"),
                 i(6, "Describe our paper structure"),
             }
