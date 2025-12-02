@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 local servers = require("core.lsp.servers")
 
 for server, setup in pairs(servers) do
-	lspconfig[server].setup(setup())
+	vim.lsp.config[server]
 end
 
 require("core.lsp.mason")
