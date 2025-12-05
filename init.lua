@@ -1,7 +1,9 @@
--- Load all config files
--- vim.filetype.add { extension = { mdx = "mdx" } }
--- vim.treesitter.language.register("markdown", "mdx")
+-- Text editor first load with our configuration
+require('config.options')
+-- Load our keymaps
+require('config.keymaps')
+-- Load our plugins
+require('config.lazy')
 
-require "config"
 require "core.globals"
 

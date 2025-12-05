@@ -23,7 +23,6 @@ return {
                 "tsx",
                 "vue",
                 "json",
-                "org",
                 "git_config",
                 "git_rebase",
                 "gitattributes",
