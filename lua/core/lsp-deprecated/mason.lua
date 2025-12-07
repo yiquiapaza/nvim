@@ -1,5 +1,5 @@
-local mason = require "mason"
-local mason_lspconfig = require "mason-lspconfig"
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
 local servers = require "core.lsp.servers"
 local lspconfig = require "lspconfig"
 

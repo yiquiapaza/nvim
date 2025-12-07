@@ -1,7 +1,7 @@
 return {
     "nvim-lualine/lualine.nvim",
     dependecies = {
-        "kyazdani42/nvim-web-devicons",
+        "nvim-mini/mini.icons",
         opts = function(_, opts)
             local trouble = require "trouble"
             local symbols = trouble.statusline {
@@ -23,7 +23,7 @@ return {
     config = function()
         require("lualine").setup {
             options = {
-                theme = "terafox",
+                theme = "base16",
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
                 disabled_filetypes = {

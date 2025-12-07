@@ -1,17 +1,19 @@
 return {
-    "lewis6991/hover.nvim",
+    'lewis6991/hover.nvim',
     config = function()
-        require("hover").setup {
-            init = function()
-                require "hover.providers.lsp"
-            end,
+        require('hover').setup {
+            providers = {
+                'hover.providers.diagnostic',
+                'hover.providers.lsp',
+                'hover.providers.man',
+            },
             preview_opts = {
                 border = "single",
             },
             preview_window = false,
             title = true,
             mouse_providers = {
-                "LSP",
+                "hover.providers.lsp",
             },
             mouse_delay = 1000,
         }

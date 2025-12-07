@@ -4,6 +4,6 @@ require('config.options')
 require('config.keymaps')
 -- Load our plugins
 require('config.lazy')
-
-require "core.globals"
+require('config.lsp')
+-- require('core')
 
