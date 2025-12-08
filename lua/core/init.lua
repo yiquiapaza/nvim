@@ -1,2 +1,3 @@
--- require('core.lsp.servers')
+require('core.options')
+require('core.keymaps')
 

@@ -1,7 +1,5 @@
--- Text editor first load with our configuration
-require('config.options')
--- Load our keymaps
-require('config.keymaps')
+-- Text editor config and keymaps
+require('core')
 -- Load our plugins
 require('config.lazy')
 require('config.lsp')
