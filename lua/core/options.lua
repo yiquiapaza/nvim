@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.snippets = "luasnip"
 
-local opt = vim.o
+local opt = vim.opt
 
 --opt.mouse = false
 opt.number = true
@@ -35,6 +35,8 @@ opt.laststatus = 3
 opt.cmdheight = 1
 opt.updatetime = 50
 opt.signcolumn = "yes"
+
+opt.cursorline = true
 
 opt.mousemoveevent = true
 

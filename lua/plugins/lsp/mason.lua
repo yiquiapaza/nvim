@@ -2,6 +2,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     opts = {
         ensure_installed = {
+            "astro",
             "emmet_ls",
             "cssls",
             "vue_ls",
@@ -15,7 +16,7 @@ return {
             "rust_analyzer",
             "tailwindcss",
             "zls",
-            "eslint",
+            "biome",
             "kotlin_language_server",
             "texlab",
             "ocamllsp",
